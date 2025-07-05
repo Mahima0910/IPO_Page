@@ -1,0 +1,92 @@
+.ipo-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 20px 0;
+}
+
+.ipo-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease-in-out;
+}
+
+.ipo-card:hover {
+    transform: translateY(-5px);
+}
+
+.ipo-card .company-name {
+    font-size: 1.6rem;
+    color: #212529;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.ipo-card p {
+    margin: 8px 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.ipo-card strong {
+    color: #333;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.details-button,
+.apply-button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    flex: 1; /* Distribute space evenly */
+}
+
+.details-button {
+    background-color: #007bff;
+    color: white;
+}
+
+.details-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.apply-button {
+    background-color: #28a745;
+    color: white;
+}
+
+.apply-button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+/* Mobile Responsiveness for IPOList */
+@media (max-width: 600px) {
+    .ipo-list {
+        grid-template-columns: 1fr; /* Stack cards vertically */
+    }
+    .card-actions {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+    }
+    .details-button, .apply-button {
+        width: 100%;
+        margin-bottom: 10px; /* Space between stacked buttons */
+    }
+}
