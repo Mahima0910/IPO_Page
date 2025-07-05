@@ -1,0 +1,175 @@
+.admin-dashboard {
+    width: 100%;
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 0 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 25px;
+}
+
+.admin-header h1 {
+    margin: 0;
+    color: #333;
+    font-size: 2.2rem;
+}
+
+.logout-button {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #c82333;
+}
+
+.admin-main {
+    padding-bottom: 40px;
+}
+
+.add-new-button {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    display: inline-block; /* Allows text to wrap */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-new-button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: #444;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.ipo-table-container {
+    overflow-x: auto; /* Enables horizontal scrolling on small screens */
+    width: 100%;
+}
+
+.ipo-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.ipo-table th,
+.ipo-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+    white-space: nowrap; /* Prevent text wrapping in table cells */
+}
+
+.ipo-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #555;
+    font-size: 1rem;
+}
+
+.ipo-table td {
+    background-color: #fff;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.ipo-table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.actions-column {
+    display: flex;
+    gap: 8px; /* Space between buttons */
+    justify-content: center;
+    align-items: center;
+    padding-top: 8px; /* Adjust padding for button alignment */
+    padding-bottom: 8px;
+}
+
+.action-button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.action-button.edit {
+    background-color: #007bff;
+    color: white;
+}
+
+.action-button.edit:hover {
+    background-color: #0056b3;
+}
+
+.action-button.delete {
+    background-color: #dc3545;
+    color: white;
+}
+
+.action-button.delete:hover {
+    background-color: #c82333;
+}
+
+/* Mobile responsiveness for AdminDashboard */
+@media (max-width: 992px) {
+    .admin-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .admin-header h1 {
+        margin-bottom: 15px;
+        font-size: 1.8rem;
+    }
+    .logout-button {
+        width: 100%;
+        text-align: center;
+    }
+    .add-new-button {
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .admin-dashboard {
+        margin: 10px;
+        padding: 0 10px;
+    }
+    .ipo-table th, .ipo-table td {
+        padding: 10px;
+        font-size: 0.85rem;
+    }
+}
